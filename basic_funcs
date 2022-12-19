@@ -1,0 +1,53 @@
+#include<stdio.h>
+   
+int add(int arr[]) {
+       int val;
+       for (int i ;i<5;i++){
+           val+= arr[i];
+       }
+    return val;
+    }
+int sub(int r[] );
+int mul (int arr[]) {
+    int out = arr[0] * arr[1];
+    return out;
+}
+ 
+ int div(int arr[]){
+    int o = arr[0] / arr[1];
+    return o;
+ }
+//----------------------------------------
+
+int main(){
+    printf("Enter number of elements:");
+    int len ;
+    scanf("%d",&len);
+    int arr[100];
+    printf("Enter %d elemnts: ",len);
+    for( int i=0;i<len;i++){
+        scanf("%d",&arr[i]);
+    }
+    printf("Elements in arr");
+    for (int j=0;j<len;j++){
+        printf(" %d ",arr[j]);
+    }
+
+    int res = add(arr);
+    int s= sub(arr );
+    int m= mul(arr);
+    int d = div(arr);
+
+    printf("addtion: %d  \n",res);
+    printf("subtraction: %d \n",s);
+    printf("Multiplication: %d  \n",m);
+    printf("Divison: %d \n",d);
+
+}   
+
+//-----------------------------------------
+
+int sub(int arr[]){
+    int ans= (arr[0] - arr[1]);
+    return ans;
+}
