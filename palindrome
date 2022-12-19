@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include<string.h>
+int main(){
+    char str[5];
+    printf("Enter your string:");
+    scanf("%s",str);
+    char rev[5];
+    // scanf("%s",rev);
+    for (int i=0;i<5;i++){
+        rev[i] = str[5-i-1]  ;
+    }
+    printf("%s %s \n",str,rev);
+    int c=0;
+    for (int i=0 ;i<5;i++){
+        if (str[i] == rev[i]){
+            continue;
+        }else {
+            c++;
+        }
+    
+    }
+    if (c>0)
+        printf("No \n");
+     else 
+        printf("Yes",c);
+}
